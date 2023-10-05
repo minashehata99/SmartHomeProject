@@ -1,0 +1,29 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F431 `(v ~T0 @X0 0 tf ]
+"54 AECUL/TC74_Module/../../mcc_generated_files/examples/i2c_master_example.h
+[; ;AECUL/TC74_Module/../../mcc_generated_files/examples/i2c_master_example.h: 54: uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg);
+[v _I2C_Read1ByteRegister `(uc ~T0 @X0 0 ef2`uc`uc ]
+"213 AECUL/TC74_Module/../../mcc_generated_files/examples/../i2c_master.h
+[v _MSSP_InterruptHandler `*F431 ~T0 @X0 1 e ]
+"4 AECUL/TC74_Module/TC74_Dri.c
+[; ;AECUL/TC74_Module/TC74_Dri.c: 4: uint8_t Temp_Sensor_TC74_ReadValue(i2c_address_t TC74_Add){
+[v _Temp_Sensor_TC74_ReadValue `(uc ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Temp_Sensor_TC74_ReadValue ]
+[v _TC74_Add `uc ~T0 @X0 1 r1 ]
+[f ]
+"6
+[; ;AECUL/TC74_Module/TC74_Dri.c: 6:     uint8_t TempVAl = 0;
+[v _TempVAl `uc ~T0 @X0 1 a ]
+[e = _TempVAl -> -> 0 `i `uc ]
+"7
+[; ;AECUL/TC74_Module/TC74_Dri.c: 7:     TempVAl=I2C_Read1ByteRegister(TC74_Add,0x00);
+[e = _TempVAl ( _I2C_Read1ByteRegister (2 , _TC74_Add -> -> 0 `i `uc ]
+"8
+[; ;AECUL/TC74_Module/TC74_Dri.c: 8:     return TempVAl;
+[e ) _TempVAl ]
+[e $UE 3  ]
+"10
+[; ;AECUL/TC74_Module/TC74_Dri.c: 10: }
+[e :UE 3 ]
+}

@@ -1,0 +1,49 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F431 `(v ~T0 @X0 0 tf ]
+"56 AECUL/EEPROM_24C02C/../../mcc_generated_files/examples/i2c_master_example.h
+[; ;AECUL/EEPROM_24C02C/../../mcc_generated_files/examples/i2c_master_example.h: 56: void I2C_Write1ByteRegister(i2c_address_t address, uint8_t reg, uint8_t data);
+[v _I2C_Write1ByteRegister `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"54
+[; ;AECUL/EEPROM_24C02C/../../mcc_generated_files/examples/i2c_master_example.h: 54: uint8_t I2C_Read1ByteRegister(i2c_address_t address, uint8_t reg);
+[v _I2C_Read1ByteRegister `(uc ~T0 @X0 0 ef2`uc`uc ]
+"213 AECUL/EEPROM_24C02C/../../mcc_generated_files/examples/../i2c_master.h
+[v _MSSP_InterruptHandler `*F431 ~T0 @X0 1 e ]
+"13 AECUL/EEPROM_24C02C/EEPROM_24C02C.c
+[; ;AECUL/EEPROM_24C02C/EEPROM_24C02C.c: 13: void EEPROM_24C02C_Write_Byte(i2c_address_t EEPROM_Add, i2c_address_t Byte_Add, uint8_t data){
+[v _EEPROM_24C02C_Write_Byte `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+{
+[e :U _EEPROM_24C02C_Write_Byte ]
+[v _EEPROM_Add `uc ~T0 @X0 1 r1 ]
+[v _Byte_Add `uc ~T0 @X0 1 r2 ]
+[v _data `uc ~T0 @X0 1 r3 ]
+[f ]
+"14
+[; ;AECUL/EEPROM_24C02C/EEPROM_24C02C.c: 14:     I2C_Write1ByteRegister(EEPROM_Add,Byte_Add,data);
+[e ( _I2C_Write1ByteRegister (3 , , _EEPROM_Add _Byte_Add _data ]
+"15
+[; ;AECUL/EEPROM_24C02C/EEPROM_24C02C.c: 15: }
+[e :UE 3 ]
+}
+"18
+[; ;AECUL/EEPROM_24C02C/EEPROM_24C02C.c: 18: uint8_t EEPROM_24C02C_Read_Byte(i2c_address_t EEPROM_Add, i2c_address_t Byte_Add){
+[v _EEPROM_24C02C_Read_Byte `(uc ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _EEPROM_24C02C_Read_Byte ]
+[v _EEPROM_Add `uc ~T0 @X0 1 r1 ]
+[v _Byte_Add `uc ~T0 @X0 1 r2 ]
+[f ]
+"19
+[; ;AECUL/EEPROM_24C02C/EEPROM_24C02C.c: 19:     uint8_t RetVal = 0;
+[v _RetVal `uc ~T0 @X0 1 a ]
+[e = _RetVal -> -> 0 `i `uc ]
+"20
+[; ;AECUL/EEPROM_24C02C/EEPROM_24C02C.c: 20:     RetVal=I2C_Read1ByteRegister(EEPROM_Add,Byte_Add);
+[e = _RetVal ( _I2C_Read1ByteRegister (2 , _EEPROM_Add _Byte_Add ]
+"21
+[; ;AECUL/EEPROM_24C02C/EEPROM_24C02C.c: 21:     return RetVal;
+[e ) _RetVal ]
+[e $UE 4  ]
+"22
+[; ;AECUL/EEPROM_24C02C/EEPROM_24C02C.c: 22: }
+[e :UE 4 ]
+}
